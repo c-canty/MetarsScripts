@@ -11,9 +11,11 @@ sudo bash setup-metar-display.sh
 
 To make a bootable copy of this Pi for another Pi, connect the destination SD card using a USB card reader. **The destination card will be erased.**
 
-Install `rpi-clone`:
+Install Git first (if `git` is not already installed), then install `rpi-clone`:
 
 ```bash
+sudo apt update
+sudo apt install -y git
 git clone https://github.com/billw2/rpi-clone.git
 sudo install -m 755 rpi-clone/rpi-clone /usr/local/sbin/rpi-clone
 sudo install -m 755 rpi-clone/rpi-clone-setup /usr/local/sbin/rpi-clone-setup
